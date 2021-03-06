@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D8B5E7125F38D330019E241 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */; };
+		5D8B5E7C25F39E890019E241 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5E7B25F39E890019E241 /* CountryData.swift */; };
 		83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF425F21CEE0058F147 /* AppDelegate.swift */; };
 		83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF625F21CEE0058F147 /* SceneDelegate.swift */; };
 		83C46EFC25F21CEE0058F147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C46EFA25F21CEE0058F147 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
+		5D8B5E7B25F39E890019E241 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		83C46EF125F21CEE0058F147 /* UniHack 2021 Vaccine Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UniHack 2021 Vaccine Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C46EF425F21CEE0058F147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C46EF625F21CEE0058F147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				83C46EFD25F21CF00058F147 /* Assets.xcassets */,
 				83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */,
 				83C46F0225F21CF00058F147 /* Info.plist */,
+				5D8B5E7B25F39E890019E241 /* CountryData.swift */,
 			);
 			path = "UniHack 2021 Vaccine Journal";
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				83E872FE25F355E700815B82 /* HomeViewController.swift */,
+				5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */,
+				5D8B5E7C25F39E890019E241 /* CountryData.swift in Sources */,
+				5D8B5E7125F38D330019E241 /* CountryInfoViewController.swift in Sources */,
 				83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */,
 				83E872FF25F355E700815B82 /* HomeViewController.swift in Sources */,
 			);

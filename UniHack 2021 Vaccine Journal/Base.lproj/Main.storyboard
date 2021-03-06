@@ -14,6 +14,9 @@
         <array key="Raleway-Regular.ttf">
             <string>Raleway-Regular</string>
         </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -30,7 +33,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="781"/>
+            <point key="canvasLocation" x="2770" y="1424"/>
+        </scene>
+        <!--Country Information-->
+        <scene sceneID="4Z0-E9-IQJ">
+            <objects>
+                <viewController id="arL-Ld-Ra8" userLabel="Country Information" customClass="CountryInfoViewController" customModule="UniHack_2021_Vaccine_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hY3-qa-Cdf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDk-Kv-lbH">
+                                <rect key="frame" x="20" y="114" width="374" height="39"/>
+                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="33"/>
+                                <color key="textColor" red="0.28235294117647058" green="0.24705882352941178" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Vaccine Information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-Nr-51g">
+                                <rect key="frame" x="20" y="200.5" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="eft-nx-jw3"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-Cz-DXS">
+                                <rect key="frame" x="20" y="20" width="44" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" image="chevron.backward" catalog="system"/>
+                                <connections>
+                                    <segue destination="j1n-tJ-zK7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="nhD-Wd-KxE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="czg-E7-zJ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iud-Nr-51g" firstAttribute="leading" secondItem="EDk-Kv-lbH" secondAttribute="leading" id="519-KS-20D"/>
+                            <constraint firstItem="fkZ-Cz-DXS" firstAttribute="top" secondItem="czg-E7-zJ2" secondAttribute="top" constant="20" id="Ahk-gq-MmI"/>
+                            <constraint firstItem="czg-E7-zJ2" firstAttribute="trailing" secondItem="fkZ-Cz-DXS" secondAttribute="trailing" constant="350" id="BVN-Og-grE"/>
+                            <constraint firstItem="czg-E7-zJ2" firstAttribute="trailing" secondItem="EDk-Kv-lbH" secondAttribute="trailing" constant="20" id="DEg-N2-83b"/>
+                            <constraint firstItem="Iud-Nr-51g" firstAttribute="trailing" secondItem="EDk-Kv-lbH" secondAttribute="trailing" id="KTd-YE-dDo"/>
+                            <constraint firstItem="EDk-Kv-lbH" firstAttribute="leading" secondItem="czg-E7-zJ2" secondAttribute="leading" constant="20" id="P5i-ge-6FU"/>
+                            <constraint firstItem="Iud-Nr-51g" firstAttribute="top" secondItem="EDk-Kv-lbH" secondAttribute="bottom" constant="47.5" id="TOZ-5H-IEe"/>
+                            <constraint firstItem="fkZ-Cz-DXS" firstAttribute="leading" secondItem="czg-E7-zJ2" secondAttribute="leading" constant="20" id="sPw-NH-kIu"/>
+                            <constraint firstItem="EDk-Kv-lbH" firstAttribute="top" secondItem="czg-E7-zJ2" secondAttribute="top" constant="114" id="xJK-aK-Vwn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CH6-tW-lLi"/>
+                    <connections>
+                        <outlet property="countryName" destination="EDk-Kv-lbH" id="KI4-fe-jGo"/>
+                        <outlet property="vaccineInfo" destination="Iud-Nr-51g" id="5gR-67-CIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heC-6w-qyM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="j1n-tJ-zK7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1971.0144927536232" y="780.80357142857144"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="GHC-u2-5gN">
@@ -72,6 +133,9 @@
                                     <action selector="countryField:" destination="ufq-iG-heT" eventType="editingDidEnd" id="Wsg-62-hCk"/>
                                     <action selector="searchCountry:" destination="x0q-72-bj6" eventType="editingDidEnd" id="xid-zj-z3i"/>
                                     <outlet property="delegate" destination="x0q-72-bj6" id="GzU-IP-bVO"/>
+                                    <segue destination="arL-Ld-Ra8" kind="popoverPresentation" identifier="Show Country Info" popoverAnchorView="wCc-T7-Ywf" id="t9I-A1-qUN">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </textField>
                         </subviews>
@@ -96,6 +160,7 @@
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="2fV-F9-viw" secondAttribute="trailing" constant="190" id="yOo-qg-EEz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nyG-LQ-Z0D"/>
                     <connections>
                         <outlet property="countryField" destination="wCc-T7-Ywf" id="ALm-tg-Bgn"/>
                         <outlet property="mapView" destination="taf-oy-TPC" id="Y9T-AX-Xam"/>
@@ -104,10 +169,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9d-IF-GkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ufq-iG-heT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="780.80357142857144"/>
+            <point key="canvasLocation" x="928.98550724637687" y="780.80357142857144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
