@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x0q-72-bj6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -58,10 +58,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taf-oy-TPC">
-                                <rect key="frame" x="0.0" y="302.5" width="414" height="559.5"/>
+                                <rect key="frame" x="0.0" y="302.5" width="414" height="593.5"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Search your destination" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
-                                <rect key="frame" x="60" y="250" width="304" height="34"/>
+                                <rect key="frame" x="60" y="250.5" width="304" height="34"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -80,7 +80,7 @@
                             <constraint firstItem="AZX-8E-SHL" firstAttribute="top" secondItem="2fV-F9-viw" secondAttribute="bottom" constant="-2" id="b4G-tc-Td2"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="3if-K6-7MZ" secondAttribute="trailing" constant="50" id="e0q-KX-fuP"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="wCc-T7-Ywf" secondAttribute="trailing" constant="50" id="hm5-vD-wR1"/>
-                            <constraint firstItem="atH-pj-sC4" firstAttribute="bottom" secondItem="taf-oy-TPC" secondAttribute="bottom" id="m2E-n1-CKD"/>
+                            <constraint firstAttribute="bottom" secondItem="taf-oy-TPC" secondAttribute="bottom" id="m2E-n1-CKD"/>
                             <constraint firstItem="AZX-8E-SHL" firstAttribute="trailing" secondItem="2fV-F9-viw" secondAttribute="trailing" constant="35" id="sYf-Bp-cMW"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="taf-oy-TPC" secondAttribute="trailing" id="ucc-bT-Mhv"/>
                             <constraint firstItem="taf-oy-TPC" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" id="xxA-Sb-cDU"/>
