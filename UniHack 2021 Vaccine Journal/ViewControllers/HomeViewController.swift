@@ -1,5 +1,5 @@
 //
-//  LaunchViewController.swift
+//  HomeViewController.swift
 //  UniHack 2021 Vaccine Journal
 //
 //  Created by Ashwin Gupta on 6/3/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
