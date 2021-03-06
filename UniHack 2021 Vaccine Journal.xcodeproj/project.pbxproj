@@ -15,6 +15,8 @@
 		83C46F0125F21CF00058F147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */; };
 		83C46F0C25F21CF00058F147 /* UniHack_2021_Vaccine_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46F0B25F21CF00058F147 /* UniHack_2021_Vaccine_JournalTests.swift */; };
 		83C46F1725F21CF00058F147 /* UniHack_2021_Vaccine_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46F1625F21CF00058F147 /* UniHack_2021_Vaccine_JournalUITests.swift */; };
+		98BBC60425F3142D00241EF1 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98BBC60225F3142D00241EF1 /* Raleway-VariableFont_wght.ttf */; };
+		98BBC60525F3142D00241EF1 /* Raleway-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98BBC60325F3142D00241EF1 /* Raleway-Italic-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		83C46F1225F21CF00058F147 /* UniHack 2021 Vaccine JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UniHack 2021 Vaccine JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C46F1625F21CF00058F147 /* UniHack_2021_Vaccine_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniHack_2021_Vaccine_JournalUITests.swift; sourceTree = "<group>"; };
 		83C46F1825F21CF00058F147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98BBC60225F3142D00241EF1 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-VariableFont_wght.ttf"; path = "../../../../../Downloads/Raleway/Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		98BBC60325F3142D00241EF1 /* Raleway-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Italic-VariableFont_wght.ttf"; path = "../../../../../Downloads/Raleway/Raleway-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				83C46EFD25F21CF00058F147 /* Assets.xcassets */,
 				83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */,
 				83C46F0225F21CF00058F147 /* Info.plist */,
+				98BBC60325F3142D00241EF1 /* Raleway-Italic-VariableFont_wght.ttf */,
+				98BBC60225F3142D00241EF1 /* Raleway-VariableFont_wght.ttf */,
 			);
 			path = "UniHack 2021 Vaccine Journal";
 			sourceTree = "<group>";
@@ -232,8 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C46F0125F21CF00058F147 /* LaunchScreen.storyboard in Resources */,
+				98BBC60425F3142D00241EF1 /* Raleway-VariableFont_wght.ttf in Resources */,
 				83C46EFE25F21CF00058F147 /* Assets.xcassets in Resources */,
 				83C46EFC25F21CEE0058F147 /* Main.storyboard in Resources */,
+				98BBC60525F3142D00241EF1 /* Raleway-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
