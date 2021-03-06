@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D8B5E7125F38D330019E241 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */; };
 		5D8B5E7C25F39E890019E241 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8B5E7B25F39E890019E241 /* CountryData.swift */; };
 		83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF425F21CEE0058F147 /* AppDelegate.swift */; };
 		83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF625F21CEE0058F147 /* SceneDelegate.swift */; };
@@ -35,6 +34,8 @@
 		83E872D825F31AC000815B82 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */; };
 		83E872D925F31AC000815B82 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */; };
 		83E872FF25F355E700815B82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E872FE25F355E700815B82 /* HomeViewController.swift */; };
+		98BBC61F25F437DA00241EF1 /* CountryInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BBC61E25F437DA00241EF1 /* CountryInfoTableViewController.swift */; };
+		98BBC62425F43CFD00241EF1 /* VaccineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BBC62325F43CFD00241EF1 /* VaccineTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
 		5D8B5E7B25F39E890019E241 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		83C46EF125F21CEE0058F147 /* UniHack 2021 Vaccine Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UniHack 2021 Vaccine Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C46EF425F21CEE0058F147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
 		83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
 		83E872FE25F355E700815B82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		98BBC61E25F437DA00241EF1 /* CountryInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewController.swift; sourceTree = "<group>"; };
+		98BBC62325F43CFD00241EF1 /* VaccineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */,
 				83C46F0225F21CF00058F147 /* Info.plist */,
 				5D8B5E7B25F39E890019E241 /* CountryData.swift */,
+				98BBC62325F43CFD00241EF1 /* VaccineTableViewCell.swift */,
 			);
 			path = "UniHack 2021 Vaccine Journal";
 			sourceTree = "<group>";
@@ -198,8 +201,8 @@
 		83E872EC25F335E800815B82 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				98BBC61E25F437DA00241EF1 /* CountryInfoTableViewController.swift */,
 				83E872FE25F355E700815B82 /* HomeViewController.swift */,
-				5D8B5E7025F38D330019E241 /* CountryInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -354,9 +357,10 @@
 			files = (
 				83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */,
 				5D8B5E7C25F39E890019E241 /* CountryData.swift in Sources */,
-				5D8B5E7125F38D330019E241 /* CountryInfoViewController.swift in Sources */,
+				98BBC61F25F437DA00241EF1 /* CountryInfoTableViewController.swift in Sources */,
 				83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */,
 				83E872FF25F355E700815B82 /* HomeViewController.swift in Sources */,
+				98BBC62425F43CFD00241EF1 /* VaccineTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

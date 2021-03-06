@@ -27,16 +27,29 @@ enum Country {
         }
     }
     
-    var vaccineList: String {
+    var vaccineList: [String] {
         switch self {
         case .japan:
-            return String("Japanese mandatory vaccines ")
+            return ["Vaccine 1", "Vaccine 2"]
         case .australia:
-            return String("Aus mandatory vaccines")
+            return ["Vaccine 1", "Vaccine 2"]
         case .newZealand:
-            return String("NZ mandatory vaccines")
+            return ["Vaccine 1", "Vaccine 2"]
         case .indonesia:
-            return String("Indonesian mandatory vaccines")
+            return ["Vaccine 1", "Vaccine 2"]
+        }
+    }
+    
+    var vaccineDesc: [String] {
+        switch self {
+        case .japan:
+            return ["Desc 1", "Desc 2"]
+        case .australia:
+            return ["Desc 1", "Desc 2"]
+        case .newZealand:
+            return ["Desc 1", "Desc 2"]
+        case .indonesia:
+            return ["Desc 1", "Desc 2"]
         }
     }
     

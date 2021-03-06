@@ -93,7 +93,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
         guard let enteredCountry = countryField.text else {return}
         for country in searchableCountries {
             if (enteredCountry == country.countryName) {
-                let destination = segue.destination as? CountryInfoViewController
+                let destination = segue.destination as? CountryInfoTableViewController
                 destination?.countrySearched = country
                 break
             }
