@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="781"/>
+            <point key="canvasLocation" x="20" y="78"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GHC-u2-5gN">
@@ -60,17 +60,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taf-oy-TPC">
                                 <rect key="frame" x="0.0" y="283.5" width="414" height="612.5"/>
                             </mapView>
-<<<<<<< Updated upstream
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Search your destination" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
                                 <rect key="frame" x="34" y="232" width="333" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EOB-qq-2gr"/>
                                 </constraints>
-=======
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
-                                <rect key="frame" x="60" y="250.5" width="304" height="34"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
->>>>>>> Stashed changes
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -105,9 +99,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
