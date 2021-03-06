@@ -8,40 +8,128 @@
 import UIKit
 import MapKit
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        
-        // Setting up a gesture
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        
-        // Allows tapping on other objects
-        tap.cancelsTouchesInView = false
-        
-        // Adding the gesture
-        view.addGestureRecognizer(tap)
-    }
-
-    @objc func dismissKeyboard() {
-        // Dismisses the keyboard
-        view.endEditing(true)
-    }
-}
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+//    }
+//
+//    @objc func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
 
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     
     // UI Elements
+
+    @IBOutlet weak var countryField: UITextField!
+    @IBOutlet weak var mapView: MKMapView!
+
     
-    @IBAction func countryField(_ sender: Any) {
-    }
-    
+    // Variable
     
     
 
+//    @IBAction func searchCountry(_ sender: Any) {
+//
+//        let request = MKLocalSearch.Request()
+//        request.naturalLanguageQuery = countryField.text
+//        request.region = mapView.region
+//
+//        let search = MKLocalSearch(request: request)
+//
+//        // Completion handler
+//        search.start { (response, error) in
+//            if response == nil {
+//                print("Error")
+//            }
+//            else {
+//
+//                // Sets the coodinates for the first element it finds
+//                let latitude = response!.boundingRegion.center.latitude
+//                let longitude = response!.boundingRegion.center.longitude
+//
+//                let countryCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//
+//                // Adding annotation adn setting region plus animation
+//                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+//                let region = MKCoordinateRegion(center: countryCoordinate, span: span)
+//                self.mapView.setRegion(region, animated: true)
+//
+//
+//            }
+//        }
+//
+//
+//
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        mapView.delegate = self
+        countryField.delegate = self
+
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        
+        // This causes crashes when uncommented
+//        textField.resignFirstResponder()  //if desired
+        performAction()
+        return true
+        
+    }
+    
+    
+
+    func performAction() {
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = countryField.text
+        request.region = mapView.region
+    
+        let search = MKLocalSearch(request: request)
+        
+        // Completion handler
+        search.start { (response, error) in
+            if let response = response {
+
+                let latitude = response.boundingRegion.center.latitude
+                let longitude = response.boundingRegion.center.longitude
+                
+                // Adding annotation
+                let annotation = MKPointAnnotation()
+                annotation.title = self.countryField.text
+                annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+                self.mapView.addAnnotation(annotation)
+                
+                // Setting the region
+                let span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
+                let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
+                self.mapView.setRegion(region, animated: true)
+                
+            }
+            
+            else {
+                print("Error")
+            }
+        }
+    }
+        
+    func displayErrorMessage(_ errorMessage: String) {
+        let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        
+        
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 
