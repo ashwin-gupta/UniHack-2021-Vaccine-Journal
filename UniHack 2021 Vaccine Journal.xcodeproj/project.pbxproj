@@ -32,7 +32,7 @@
 		83E872D725F31AC000815B82 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C525F31AC000815B82 /* Raleway-ExtraLight.ttf */; };
 		83E872D825F31AC000815B82 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */; };
 		83E872D925F31AC000815B82 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */; };
-		83E872EE25F3360D00815B82 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E872ED25F3360D00815B82 /* LaunchViewController.swift */; };
+		83E872FF25F355E700815B82 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E872FE25F355E700815B82 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,7 @@
 		83E872C525F31AC000815B82 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
 		83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
-		83E872ED25F3360D00815B82 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		83E872FE25F355E700815B82 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 		83E872EC25F335E800815B82 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				83E872ED25F3360D00815B82 /* LaunchViewController.swift */,
+				83E872FE25F355E700815B82 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -347,8 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */,
-				83E872EE25F3360D00815B82 /* LaunchViewController.swift in Sources */,
 				83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */,
+				83E872FF25F355E700815B82 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

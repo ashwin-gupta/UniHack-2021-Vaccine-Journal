@@ -26,10 +26,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1pC-ye-nk1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="78"/>
+            <point key="canvasLocation" x="1148" y="781"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GHC-u2-5gN">
@@ -60,13 +61,16 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taf-oy-TPC">
                                 <rect key="frame" x="0.0" y="283.5" width="414" height="612.5"/>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Search your destination" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
-                                <rect key="frame" x="34" y="232" width="333" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your destination" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
+                                <rect key="frame" x="34" y="231.5" width="333" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EOB-qq-2gr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <action selector="countryField:" destination="ufq-iG-heT" eventType="editingDidEnd" id="Wsg-62-hCk"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="atH-pj-sC4"/>
@@ -92,6 +96,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9d-IF-GkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ufq-iG-heT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="780.80357142857144"/>
         </scene>
