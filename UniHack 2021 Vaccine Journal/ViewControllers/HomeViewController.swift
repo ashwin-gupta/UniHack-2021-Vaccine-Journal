@@ -28,10 +28,11 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
 
     @IBOutlet weak var countryField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {}
 
     
     // Variable
-    
+    let searchableCountries = [Country.australia, Country.newZealand, Country.japan, Country.indonesia]
     
 
 //    @IBAction func searchCountry(_ sender: Any) {
@@ -83,11 +84,21 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
         // This causes crashes when uncommented
 //        textField.resignFirstResponder()  //if desired
         performAction()
+        performSegue(withIdentifier: "Show Country Info", sender: AnyObject.self)
         return true
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let enteredCountry = countryField.text else {return}
+        for country in searchableCountries {
+            if (enteredCountry == country.countryName) {
+                let destination = segue.destination as? CountryInfoViewController
+                destination?.countrySearched = country
+                break
+            }
+        }
+    }
 
     func performAction() {
         let request = MKLocalSearch.Request()
@@ -131,6 +142,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    
     
 
     /*
