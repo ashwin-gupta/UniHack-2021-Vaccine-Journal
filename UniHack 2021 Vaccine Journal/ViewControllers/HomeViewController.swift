@@ -6,8 +6,37 @@
 //
 
 import UIKit
+import MapKit
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        
+        // Setting up a gesture
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        
+        // Allows tapping on other objects
+        tap.cancelsTouchesInView = false
+        
+        // Adding the gesture
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        // Dismisses the keyboard
+        view.endEditing(true)
+    }
+}
+
 
 class HomeViewController: UIViewController {
+    
+    // UI Elements
+    
+    @IBAction func countryField(_ sender: Any) {
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
