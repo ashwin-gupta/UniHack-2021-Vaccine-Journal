@@ -32,68 +32,74 @@
             </objects>
             <point key="canvasLocation" x="1148" y="781"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="GHC-u2-5gN">
             <objects>
-                <viewController id="x0q-72-bj6" sceneMemberID="viewController">
+                <viewController id="x0q-72-bj6" customClass="HomeViewController" customModule="UniHack_2021_Vaccine_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTc-rO-Kaf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome to " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fV-F9-viw">
-                                <rect key="frame" x="34" y="79" width="190" height="36"/>
+                                <rect key="frame" x="32" y="108" width="192" height="36"/>
                                 <color key="textColor" red="0.28235294117647058" green="0.24705882352941178" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Raleway-ExtraBold" family="Raleway" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TravelVaccy" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="AZX-8E-SHL">
-                                <rect key="frame" x="34" y="115" width="225" height="37"/>
+                                <rect key="frame" x="32" y="144" width="224" height="37"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.2470588235" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Raleway-ExtraBold" family="Raleway" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find out what vaccines you need for your upcoming holiday by searching or clicking on the map." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3if-K6-7MZ">
-                                <rect key="frame" x="34" y="160" width="333" height="49.5"/>
+                                <rect key="frame" x="32" y="189" width="335" height="33"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                 <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taf-oy-TPC">
-                                <rect key="frame" x="0.0" y="283.5" width="414" height="612.5"/>
+                                <rect key="frame" x="0.0" y="286" width="414" height="610"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your destination" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-T7-Ywf">
-                                <rect key="frame" x="34" y="231.5" width="333" height="34"/>
+                                <rect key="frame" x="32" y="238" width="350" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="EOB-qq-2gr"/>
+                                    <constraint firstAttribute="height" constant="32" id="EOB-qq-2gr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="location"/>
                                 <connections>
                                     <action selector="countryField:" destination="ufq-iG-heT" eventType="editingDidEnd" id="Wsg-62-hCk"/>
+                                    <action selector="searchCountry:" destination="x0q-72-bj6" eventType="editingDidEnd" id="xid-zj-z3i"/>
+                                    <outlet property="delegate" destination="x0q-72-bj6" id="GzU-IP-bVO"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="atH-pj-sC4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wCc-T7-Ywf" firstAttribute="top" secondItem="3if-K6-7MZ" secondAttribute="bottom" constant="22" id="1kM-ln-1Wa"/>
+                            <constraint firstItem="wCc-T7-Ywf" firstAttribute="top" secondItem="3if-K6-7MZ" secondAttribute="bottom" constant="16" id="1kM-ln-1Wa"/>
                             <constraint firstItem="AZX-8E-SHL" firstAttribute="leading" secondItem="2fV-F9-viw" secondAttribute="leading" id="4uY-05-iXe"/>
-                            <constraint firstItem="2fV-F9-viw" firstAttribute="top" secondItem="atH-pj-sC4" secondAttribute="top" constant="35" id="54t-9N-dLd"/>
-                            <constraint firstItem="taf-oy-TPC" firstAttribute="top" secondItem="wCc-T7-Ywf" secondAttribute="bottom" constant="18" id="7TA-A3-7xo"/>
+                            <constraint firstItem="2fV-F9-viw" firstAttribute="top" secondItem="atH-pj-sC4" secondAttribute="top" constant="64" id="54t-9N-dLd"/>
+                            <constraint firstItem="taf-oy-TPC" firstAttribute="top" secondItem="wCc-T7-Ywf" secondAttribute="bottom" constant="16" id="7TA-A3-7xo"/>
                             <constraint firstItem="3if-K6-7MZ" firstAttribute="top" secondItem="AZX-8E-SHL" secondAttribute="bottom" constant="8" id="JYt-u4-vMl"/>
-                            <constraint firstItem="wCc-T7-Ywf" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" constant="34" id="QcQ-xh-2wT"/>
-                            <constraint firstItem="2fV-F9-viw" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" constant="34" id="RdJ-JI-Qto"/>
+                            <constraint firstItem="wCc-T7-Ywf" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" constant="32" id="QcQ-xh-2wT"/>
+                            <constraint firstItem="2fV-F9-viw" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" constant="32" id="RdJ-JI-Qto"/>
                             <constraint firstItem="3if-K6-7MZ" firstAttribute="leading" secondItem="AZX-8E-SHL" secondAttribute="leading" id="UJ9-ed-KjB"/>
                             <constraint firstItem="AZX-8E-SHL" firstAttribute="top" secondItem="2fV-F9-viw" secondAttribute="bottom" id="b4G-tc-Td2"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="3if-K6-7MZ" secondAttribute="trailing" constant="47" id="e0q-KX-fuP"/>
-                            <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="wCc-T7-Ywf" secondAttribute="trailing" constant="47" id="hm5-vD-wR1"/>
+                            <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="wCc-T7-Ywf" secondAttribute="trailing" constant="32" id="hm5-vD-wR1"/>
                             <constraint firstAttribute="bottom" secondItem="taf-oy-TPC" secondAttribute="bottom" id="m2E-n1-CKD"/>
-                            <constraint firstItem="AZX-8E-SHL" firstAttribute="trailing" secondItem="2fV-F9-viw" secondAttribute="trailing" constant="35" id="sYf-Bp-cMW"/>
+                            <constraint firstItem="AZX-8E-SHL" firstAttribute="trailing" secondItem="2fV-F9-viw" secondAttribute="trailing" constant="32" id="sYf-Bp-cMW"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="taf-oy-TPC" secondAttribute="trailing" id="ucc-bT-Mhv"/>
                             <constraint firstItem="taf-oy-TPC" firstAttribute="leading" secondItem="atH-pj-sC4" secondAttribute="leading" id="xxA-Sb-cDU"/>
                             <constraint firstItem="atH-pj-sC4" firstAttribute="trailing" secondItem="2fV-F9-viw" secondAttribute="trailing" constant="190" id="yOo-qg-EEz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryField" destination="wCc-T7-Ywf" id="ALm-tg-Bgn"/>
+                        <outlet property="mapView" destination="taf-oy-TPC" id="Y9T-AX-Xam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I9d-IF-GkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ufq-iG-heT" userLabel="Exit" sceneMemberID="exit"/>
