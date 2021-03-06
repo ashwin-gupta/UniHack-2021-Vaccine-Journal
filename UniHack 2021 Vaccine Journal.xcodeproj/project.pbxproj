@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF425F21CEE0058F147 /* AppDelegate.swift */; };
 		83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF625F21CEE0058F147 /* SceneDelegate.swift */; };
-		83C46EF925F21CEE0058F147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C46EF825F21CEE0058F147 /* ViewController.swift */; };
 		83C46EFC25F21CEE0058F147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C46EFA25F21CEE0058F147 /* Main.storyboard */; };
 		83C46EFE25F21CF00058F147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C46EFD25F21CF00058F147 /* Assets.xcassets */; };
 		83C46F0125F21CF00058F147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */; };
@@ -33,6 +32,7 @@
 		83E872D725F31AC000815B82 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C525F31AC000815B82 /* Raleway-ExtraLight.ttf */; };
 		83E872D825F31AC000815B82 /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */; };
 		83E872D925F31AC000815B82 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */; };
+		83E872EE25F3360D00815B82 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E872ED25F3360D00815B82 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 		83C46EF125F21CEE0058F147 /* UniHack 2021 Vaccine Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UniHack 2021 Vaccine Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C46EF425F21CEE0058F147 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C46EF625F21CEE0058F147 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83C46EF825F21CEE0058F147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83C46EFB25F21CEE0058F147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83C46EFD25F21CF00058F147 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83C46F0025F21CF00058F147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		83E872C525F31AC000815B82 /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
 		83E872C625F31AC000815B82 /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
 		83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		83E872ED25F3360D00815B82 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +135,10 @@
 		83C46EF325F21CEE0058F147 /* UniHack 2021 Vaccine Journal */ = {
 			isa = PBXGroup;
 			children = (
+				83E872EC25F335E800815B82 /* ViewControllers */,
 				83E872B525F31A0A00815B82 /* Fonts */,
 				83C46EF425F21CEE0058F147 /* AppDelegate.swift */,
 				83C46EF625F21CEE0058F147 /* SceneDelegate.swift */,
-				83C46EF825F21CEE0058F147 /* ViewController.swift */,
 				83C46EFA25F21CEE0058F147 /* Main.storyboard */,
 				83C46EFD25F21CF00058F147 /* Assets.xcassets */,
 				83C46EFF25F21CF00058F147 /* LaunchScreen.storyboard */,
@@ -188,6 +188,14 @@
 				83E872C725F31AC000815B82 /* Raleway-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		83E872EC25F335E800815B82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83E872ED25F3360D00815B82 /* LaunchViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,8 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C46EF925F21CEE0058F147 /* ViewController.swift in Sources */,
 				83C46EF525F21CEE0058F147 /* AppDelegate.swift in Sources */,
+				83E872EE25F3360D00815B82 /* LaunchViewController.swift in Sources */,
 				83C46EF725F21CEE0058F147 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
