@@ -8,20 +8,6 @@
 import UIKit
 import MapKit
 
-//extension UIViewController {
-//    func hideKeyboardWhenTappedAround() {
-//
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-//        tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
-//    }
-//
-//    @objc func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
-//}
-
-
 class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     
     // UI Elements
@@ -33,43 +19,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
     
     // Variable
     let searchableCountries = [Country.australia, Country.newZealand, Country.japan, Country.indonesia]
-    
-
-//    @IBAction func searchCountry(_ sender: Any) {
-//
-//        let request = MKLocalSearch.Request()
-//        request.naturalLanguageQuery = countryField.text
-//        request.region = mapView.region
-//
-//        let search = MKLocalSearch(request: request)
-//
-//        // Completion handler
-//        search.start { (response, error) in
-//            if response == nil {
-//                print("Error")
-//            }
-//            else {
-//
-//                // Sets the coodinates for the first element it finds
-//                let latitude = response!.boundingRegion.center.latitude
-//                let longitude = response!.boundingRegion.center.longitude
-//
-//                let countryCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//
-//                // Adding annotation adn setting region plus animation
-//                let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//                let region = MKCoordinateRegion(center: countryCoordinate, span: span)
-//                self.mapView.setRegion(region, animated: true)
-//
-//
-//            }
-//        }
-//
-//
-//
-//    }
-    
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,10 +29,6 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-        
-        // This causes crashes when uncommented
-//        textField.resignFirstResponder()  //if desired
         performAction()
         performSegue(withIdentifier: "Show Country Info", sender: AnyObject.self)
         return true
@@ -142,18 +88,4 @@ class HomeViewController: UIViewController, MKMapViewDelegate, UITextFieldDelega
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

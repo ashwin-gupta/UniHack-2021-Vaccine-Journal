@@ -43,7 +43,6 @@ class CountryInfoTableViewController: UIViewController, UITableViewDataSource, U
         else {
             return 0
         }
-        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -56,9 +55,4 @@ class CountryInfoTableViewController: UIViewController, UITableViewDataSource, U
     
         return vaccineCell
     }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return countrySearched?.countryName
-//    }
-
 }

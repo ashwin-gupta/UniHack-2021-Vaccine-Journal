@@ -1,10 +1,3 @@
-//
-//  CountryData.swift
-//  UniHack 2021 Vaccine Journal
-//
-//  Created by Su-Kuen Koh on 6/3/21.
-//
-
 import Foundation
 
 enum Country {
