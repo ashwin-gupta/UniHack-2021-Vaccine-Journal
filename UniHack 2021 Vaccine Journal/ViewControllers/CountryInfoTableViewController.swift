@@ -7,27 +7,46 @@
 
 import UIKit
 
-class CountryInfoTableViewController: UITableViewController {
+class CountryInfoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var countrySearched: Country?
     let CELL_VACCINE = "vaccineCell"
     
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var countryName: UILabel!
+    @IBOutlet weak var errorMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.table.dataSource = self
+        self.table.delegate = self
+        if let countrySearched = countrySearched {
+                    countryName.text = countrySearched.countryName
+                    errorMessage.text = ""
+                }
+                else {
+                    countryName.text = "Sorry!"
+                    errorMessage.text = "We do not have current information for that country"
+                }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return (countrySearched?.vaccineList.count)!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let countrySearched = countrySearched {
+            return (countrySearched.vaccineList.count)
+        }
+        else {
+            return 0
+        }
+        
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let vaccineCell = tableView.dequeueReusableCell(withIdentifier: CELL_VACCINE, for: indexPath) as! VaccineTableViewCell
         
         let vaccineName = countrySearched?.vaccineList[indexPath.row]
@@ -38,8 +57,8 @@ class CountryInfoTableViewController: UITableViewController {
         return vaccineCell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return countrySearched?.countryName
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return countrySearched?.countryName
+//    }
 
 }
